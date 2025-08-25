@@ -12,7 +12,7 @@ dados = pd.DataFrame({
 # Transformação logarítmica
 dados['log_receita'] = np.log(dados['receita'])
 
-# verificação da relação linear
+# Verificação da relação linear
 sns.Implot(x='tempo', y='log_receita', data=dados)
 plt.title('Tranformação logarítmica para linearizar a Relação')
 plt.show()

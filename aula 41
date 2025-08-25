@@ -1,0 +1,20 @@
+from sklearn.model_selection import train_test_split
+from sklearn.linear_model import LinearRegression
+import pandas as pd 
+
+# Carregar dataset
+data = pd.read_csv('https://example.com/dataset.csv')
+
+# Selecionar variáveis independentes e dependente
+X = data[['Area', 'Rooms', 'Location']]
+y = data['Price']
+
+# Dividir o dataset em treino e teste
+X_train, X_test, y_train, y_test = train_test_split(X, y, teste_size=0.2, random_state=42)
+
+# Criar o modelo de regressão linear
+model = LinearRegression()
+model.fit(X_train, y_train)
+
+# Exibir coeficientes 
+print("Coeficientes:", model.coef_)
