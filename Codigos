@@ -1,1 +1,18 @@
+import pandas as pd 
+import numpy as np 
+import matplotlib.pyplot as plt 
+import seaborn as sns
 
+# Simulação de dados
+dados = pd.DataFrame({
+    'tempo': np.arange(1, 101),
+    'receita': np.exp(np.arange(1, 101) / 10)
+})
+
+# Transformação logarítmica
+dados['log_receita'] = np.log(dados['receita'])
+
+# verificação da relação linear
+sns.Implot(x='tempo', y='log_receita', data=dados)
+plt.title('Tranformação logarítmica para linearizar a Relação')
+plt.show()
