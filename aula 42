@@ -1,0 +1,30 @@
+import numpy as np 
+import matplotlib.pyplot as plt 
+from sklearn.linear_model import LinearRegression 
+from sklearn.model_selection import train_test_split 
+
+# Gerando dados fictícios 
+X = np.array([[1], [2], [3], [4], [5]])
+y = np.array([5, 7, 9, 11, 13])
+
+# Dividindo os dados em treino e teste
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2)
+
+# Estimando o modelo 
+modelo = LinearRegression()
+modelo.fit(X_train, y_train)
+
+# Prevendo com os dados de teste 
+y_pred = modelo.predict(X_test)
+
+# Analisando o coeficiente e o intercepto
+print("coeficiente:", modelo.coef_)
+print("Intercepto:", modelo.intercept_)
+
+# Visualizando os resultados 
+plt.scatter(X_test, y_test, color='black')
+plt.plot(X_test, y_pred color='blue', linewidth=3)
+plt.xlabel('Variável Independente')
+plt.ylabel('Variável Dependente')
+plt.title('Regressão Linear Simples')
+plt.show()
