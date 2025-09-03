@@ -1,0 +1,13 @@
+# Exemplo de visualização de dados com Seaborn
+import seaborn as sns 
+import matplotlib.pyplot as plt 
+
+# Carregando dataset de exemplo 
+df = sns.load_dataset("tips")
+
+# Criano um gráfico de barras
+sns.barplot(X="day", y="total_bill", data=df)
+
+# Adicionando título e exibindo
+plt.title("Total de contas por Dia da Semana")
+plt.show()
