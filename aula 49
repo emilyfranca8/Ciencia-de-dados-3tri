@@ -1,0 +1,7 @@
+# Criando um exemplo simples 
+print("Olá, bem-vindo ao Google Colab!")
+
+# Variáveis no Python 
+nome = "Carla"
+idade = 17
+print(f"{nome} tem {idade} anos e está começando com Python!")
