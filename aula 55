@@ -1,0 +1,6 @@
+# Criando uma lista de listas
+alunos_notas = [[90, 85, 88], [70, 80, 78], [92, 96, 94]]
+
+# Usando List Comprehension para encontrar alunos com nota acima de 90
+notas_acima_90 = [nota for aluno in alunos_notas for nota in aluno if nota > 90]
+print(notas_acima_90)
