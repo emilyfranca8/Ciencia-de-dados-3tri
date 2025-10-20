@@ -1,0 +1,19 @@
+import pandas as pd
+import numpy as np 
+
+# Carregar dados de exemplo
+dados = pd.DataFrame({
+    'Temperatura': [25, 28, np.nan, 22, 30],
+    'Humidade': [85, np.nan, 78, 65, 90]
+})
+
+# Verificar dados com NaN
+print(dados.isnull())
+
+# Substituir NaNs na coluna Temperatura com a média
+dados['Temperatura'].fillna(dados['Temperatura'].mean(), inplace=True)
+
+# Remover linhas com NaNs 
+dados.dropna(inplace=True)
+
+print(dados)
