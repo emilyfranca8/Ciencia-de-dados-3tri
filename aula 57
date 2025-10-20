@@ -1,0 +1,9 @@
+import pandas as pd 
+
+# Carregano dados e exemplo no Google Colab
+dados = pd.read_csv("caminhp_do_arquivo.csv")
+
+# Verificando as dimensões do dataset
+print("Dimensões dos dados:", dados.shape)
+print("Visualizando as primeiras linhas:")
+print(dados.head())
